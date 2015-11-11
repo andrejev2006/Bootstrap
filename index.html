@@ -57,22 +57,42 @@
                 </li>
                 <li><a href="contactus.html"><span class="fa fa-envelope"></span> Contact</a></li>
             </ul>
-            <form class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input type="email" id="email" class="form-control" placeholder="Email"/>
-                    <input type="password" id="password" class="form-control" placeholder="Password"/>
-
-                    <div class="checkbox">
-                        <label style="color:#ffffff;"><input type="checkbox" id="rememberme" value=""/>Remember
-                            Me</label>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-default btn-info">Sign In</button>
-            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a data-toggle="modal" data-target="#loginModal">
+                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
 
+<div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Login </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="email" id="email" class="form-control" placeholder="Email"/>
+                        <input type="password" id="password" class="form-control" placeholder="Password"/>
+
+                        <div class="checkbox"><label><input type="checkbox" id="rememberme" value=""/>Remember
+                            Me</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-default btn-info">Sign In</button>
+                    <button type="button" class="btn btn-default btn-sm"
+                            data-dismiss="modal">Cancel
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <header class="jumbotron">
 
@@ -94,7 +114,8 @@
             </div>
             <div class="col-xs-12 col-sm-2">
                 <p style="padding: 40px;"></p>
-                <a class="btn btn-default btn-warning btn-block" href="index.html#reservationForm" role="button">Reserve
+                <a class="btn btn-default btn-warning btn-block" href="index.html#reservationForm" role="button"
+                   data-toggle="tooltip" title="Or Call us at +852 12345678" data-placement="bottom">Reserve
                     Table</a>
             </div>
         </div>
@@ -141,8 +162,10 @@
             <div class="media-body">
                 <h2 class="media-heading">Weekend Grand Buffet <span class="label label-danger">New</span></h2>
 
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six
-                    main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per
+                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers,
+                    six
+                    main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99
+                    per
                     person </p>
 
                 <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
@@ -188,12 +211,14 @@
     <div class="row row-content">
         <div class="col-sm-3">
             <p style="padding: 20px;"></p>
+
             <h3 align="center">Reserve a Table</h3>
         </div>
         <div class="col-sm-9">
             <form class="form-horizontal" id="reservationForm">
                 <div class="form-group">
                     <label for="radioGroup" class="control-label col-sm-2">Number of Guests</label>
+
                     <div class="col-sm-10" id="radioGroup" style="padding-left: 0;">
                         <label for="radio-1" class="radio-inline">
                             <input type="radio" id="radio-1" name="guestnum">1</label>
@@ -211,6 +236,7 @@
                 </div>
                 <div class="form-group has-feedback">
                     <label for="resdate" class="control-label col-sm-2">Data and Time</label>
+
                     <div class="col-sm-10" style="padding-left: 0;">
                         <div class="col-sm-5" style="padding-left: 0;">
                             <input id="resdate" type="text" name="resdate" class="form-control" placeholder="Date"/>
@@ -227,8 +253,10 @@
                 </div>
             </form>
             <div class="alert alert-warning alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong>Warning:</strong> Please <a href="tel:+85212345678" class="alert-link">call</a> us to reserve for more than six guests.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <strong>Warning:</strong> Please <a href="tel:+85212345678" class="alert-link">call</a> us to reserve
+                for more than six guests.
             </div>
         </div>
     </div>
@@ -283,6 +311,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
 </body>
 
 </html>
