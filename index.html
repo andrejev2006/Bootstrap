@@ -134,7 +134,7 @@
                     <div class="form-group">
                         <label for="radioGroup" class="control-label col-sm-2">Number of Guests</label>
 
-                        <div class="col-sm-10" id="radioGroup" style="padding-left: 0;">
+                        <div class="col-sm-10" id="radioGroup">
                             <label for="radio-1" class="radio-inline">
                                 <input type="radio" id="radio-1" name="guestnum">1</label>
                             <label for="radio-2" class="radio-inline">
@@ -151,7 +151,7 @@
                     </div>
                     <div class="form-group">
                         <label for="ressection" class="control-label col-sm-2">Section</label>
-                        <div class="col-sm-10" id="ressection" style="padding-left: 0;">
+                        <div class="col-sm-10" id="ressection">
                             <div class="btn-group" data-toggle="buttons">
                                 <label class="btn btn-success active">
                                     <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-smoking
@@ -166,7 +166,7 @@
                         <label for="resdate" class="control-label col-sm-2">Data and Time</label>
 
                         <div class="col-sm-10" style="padding-left: 0;">
-                            <div class="col-sm-5" style="padding-left: 0;">
+                            <div class="col-sm-5">
                                 <input id="resdate" type="text" name="resdate" class="form-control" placeholder="Date"/>
                                 <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
                             </div>
@@ -177,10 +177,12 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary col-sm-offset-2" type="submit">Reserve</button>
-                        <button type="button" class="btn btn-default btn-sm"
-                                data-dismiss="modal">Cancel
-                        </button>
+                        <div class="col-sm-12">
+                            <button class="btn btn-primary col-sm-offset-2" type="submit">Reserve</button>
+                            <button type="button" class="btn btn-default btn-sm"
+                                    data-dismiss="modal">Cancel
+                            </button>
+                        </div>
                     </div>
                 </form>
                 <div class="alert alert-warning alert-dismissible" role="alert">
