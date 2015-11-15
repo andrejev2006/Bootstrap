@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ristorante Con Fusion</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
 
     <link href="css/mystyles.css" rel="stylesheet">
@@ -114,7 +114,8 @@
             </div>
             <div class="col-xs-12 col-sm-2">
                 <p style="padding: 40px;"></p>
-                <a class="btn btn-default btn-warning btn-block" data-toggle="modal" data-target="#reservationModal" role="button">Reserve
+                <a class="btn btn-default btn-warning btn-block" data-toggle="modal" data-target="#reservationModal"
+                   role="button">Reserve
                     Table</a>
             </div>
         </div>
@@ -151,10 +152,12 @@
                     </div>
                     <div class="form-group">
                         <label for="ressection" class="control-label col-sm-2">Section</label>
+
                         <div class="col-sm-10" id="ressection">
                             <div class="btn-group" data-toggle="buttons">
                                 <label class="btn btn-success active">
-                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-smoking
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked>
+                                    Non-smoking
                                 </label>
                                 <label class="btn btn-danger">
                                     <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
@@ -168,7 +171,8 @@
                         <div class="col-sm-10" style="padding-left: 0;">
                             <div class="col-sm-5">
                                 <input id="resdate" type="text" name="resdate" class="form-control" placeholder="Date"/>
-                                <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-calendar form-control-feedback"
+                                      aria-hidden="true"></span>
                             </div>
                             <div class="col-sm-5">
                                 <input type="text" class="form-control" name="restime" placeholder="Time"/>
@@ -188,7 +192,8 @@
                 <div class="alert alert-warning alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <strong>Warning:</strong> Please <a href="tel:+85212345678" class="alert-link">call</a> us to reserve
+                    <strong>Warning:</strong> Please <a href="tel:+85212345678" class="alert-link">call</a> us to
+                    reserve
                     for more than six guests.
                 </div>
             </div>
@@ -211,24 +216,38 @@
                     <div class="item active">
                         <img class="img-responsive"
                              src="img/uthappizza.png" alt="Uthappizza">
+
                         <div class="carousel-caption">
-                            <h2>Uthappizza  <span class="label label-danger">Hot</span> <span class="badge">$4.99</span></h2>
-                            <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                            <h2>Uthappizza <span class="label label-danger">Hot</span> <span class="badge">$4.99</span>
+                            </h2>
+
+                            <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with
+                                Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo
+                                Paneer.</p>
+
                             <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
                         </div>
                     </div>
                     <div class="item">
                         <img src="img/buffet.png" class="img-responsive" alt="Buffet"/>
+
                         <div class="carousel-caption">
                             <h2>Weekend Grand Buffet <span class="label label-danger label-xs">New</span></h2>
-                            <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+
+                            <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing
+                                appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft
+                                drinks. All for just $19.99 per person </p>
                         </div>
                     </div>
                     <div class="item">
                         <img class="img-responsive" src="img/alberto.png" alt="Alberto Somayya"/>
+
                         <div class="carousel-caption">
                             <h2>Executive Chef</h2>
-                            <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.
+
+                            <p>Award winning three-star Michelin chef with wide International experience having worked
+                                closely with whos-who in the culinary world, he specializes in creating mouthwatering
+                                Indo-Italian fusion experiences.
                             </p>
                         </div>
                     </div>
@@ -242,6 +261,7 @@
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
+
                 <div class="btn-group" id="carouselButtons">
                     <button class="btn btn-danger btn-xs" id="carousel-pause">
                         <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
@@ -385,16 +405,16 @@
 </footer>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $("#mycarousel").carousel({interval:2000});
-        $("#carousel-pause").click(function(){
+    $(document).ready(function () {
+        $("#mycarousel").carousel({interval: 2000});
+        $("#carousel-pause").click(function () {
             $("#mycarousel").carousel('pause');
         });
-        $("#carousel-play").click(function(){
+        $("#carousel-play").click(function () {
             $("#mycarousel").carousel('cycle');
         });
     });
